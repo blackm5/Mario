@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white url(img/background.png) top center no-repeat fixed; 
+    background-size: cover;
+}
+div.game-board {
+    width: 80%;
+    height: 400px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(hsla(197, 71%, 73%, 0.800), hsla(197, 100%, 94%, 0.800));
+}
+img.clouds {
+    position: absolute;
+    margin-top: 10px;
+    width: 300px;
+    /*--------------animation-------------*/
+    animation: clouds-animation 20s infinite linear;
+}
+img.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    /*left: 102px;
+    --------------animation-------------*/
+    animation: piper-animation 1.5s infinite linear;
+}
+img.mario {
+    position: absolute;
+    bottom: 0px;
+    /*bottom: 65px;*/
+    width: 120px;
+}
+.jump {
+    /*--------------animation-------------*/
+    animation: jump 600ms ease-out;
+}
+/*--------------@keyframes{}-------------*/
+@keyframes clouds-animation {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 100%;
+    }
+}
+/*--------------@keyframes{}-------------*/
+@keyframes piper-animation {
+    from {
+        right: -50px;
+    }
+    to {
+        right: 100%;
+    }
+}
+/*--------------@keyframes{}-------------*/
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 140px;
+    }
+    50% {
+        bottom: 140px;
+    }
+    60% {
+        bottom: 140px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+img#game {
+    position: absolute;
+    margin-top: 30px;
+    display: none;
+}
